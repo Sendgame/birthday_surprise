@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+  <section class="screen active" id="screen1">
+    <div class="card">
+      <h1>Happy Birthday❤️</h1>
+      <p>Someone special has a surprise waiting...</p>
+      <button onclick="nextScreen(2)">Open Surprise 🎁</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen2">
+    <div class="card">
+      <h2>Before we begin...</h2>
+      <p>Are you ready for a cute birthday journey?</p>
+      <button onclick="nextScreen(3)">Yes, I'm ready 💖</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen3">
+    <div class="card">
+      <h2>Before you blow candle<br>Make a Wish ✨</h2>
+      <div class="cake">
+        <div class="candle">🔥</div>
+        🎂
+      </div>
+      <p>Click below to blow the candle!</p>
+      <button onclick="blowCandle()">Blow Candle 🌬️</button>
+      <button class="hidden" id="afterCandle" onclick="nextScreen(4)">Next Surprise 🎉</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen4">
+    <div class="card">
+      <h2>Open Your Gift 🎁</h2>
+      <div class="gift" onclick="openGift()">🎁</div>
+      <p id="giftText" class="hidden">
+        You are amazing, kind, and truly special person for me. May your birthday be filled with happiness, love, and
+        beautiful memories. 💕
+      </p>
+      <button class="hidden" id="afterGift" onclick="nextScreen(5)">See Memories 📸</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen5">
+    <div class="card">
+      <h2>Beautiful Memories ?</h2>
+      <h2>We've nothing to see 🥲</h2>
+      <div class="gallery">
+        <div class="photo">We lost..</div>
+        <div class="photo">We lost..</div>
+        <div class="photo">Everything🥹</div>
+      </div>
+      <button onclick="nextScreen(6)">Final Message 💌</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen6">
+    <div class="card">
+      <h1>Happy Birthday Once Again 🤗</h1>
+      <p>
+        May this year bring you success, peace, laughter, and all the happiness you deserve.<br>
+        I don't know where we will be in the future, whether we will be in touch or not, but I will never forget you.
+        You are so special to me that you can't even imagine. No matter who comes into my life, my love for you will
+        never end. I only hope you are very happy wherever you live.<br>Sorry for everything and Thank you for coming into my life.
+        May you make great progress in life. May you have good health and wealth. May your parents be with you
+        throughout your life.<br>God bless you!
+        ❤️‍🩹
+
+      </p>
+      <button onclick="restart()">Replay 🔁</button>
+    </div>
+  </section>
+
+  <canvas id="confetti"></canvas>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
